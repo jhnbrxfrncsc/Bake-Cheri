@@ -1,15 +1,12 @@
 import express from 'express';
 
+import { getData, getProducts } from '../controller/appController.js';
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.send('index');
-});
+router.get('/', getData);
 
-router.get('/about', (req, res) => {
-    res.send('<h1> About Me </h1>');
-});
+router.get('/api/products', getProducts);
 
 router.get('/services', (req, res) => {
     res.send('<h1> Services </h1>');

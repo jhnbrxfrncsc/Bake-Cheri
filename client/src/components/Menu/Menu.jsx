@@ -14,7 +14,7 @@ const classes = useStyles();
 const [animation, setAnimation] = useState(false)
 
 const handleAnimation = () => {
-    if(window.scrollY >= 2000) {
+    if(window.scrollY >= 1500) {
         setAnimation(true)
     }
 }

@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import cors from 'cors';
+
 import appRoutes from './routes/appRoute.js';
 
 const app = express();
@@ -23,8 +24,7 @@ mongoose.connect(DBURI, {
     })
     .catch(err => console.log(err.message));
 
-
-// Middleware
+// Middlewares
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());

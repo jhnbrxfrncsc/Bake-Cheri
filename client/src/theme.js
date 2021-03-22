@@ -15,6 +15,15 @@ const theme = createMuiTheme({
             contrastText: '#000',
         },
         type: "dark"
+    },
+    typography : {
+        fontFamily : [
+            'Oswald', 
+            'SedanSC', 
+            'Sniglet',
+            'sans-serif', 
+            'cursive'
+        ]. join(','),
     }
 });
 

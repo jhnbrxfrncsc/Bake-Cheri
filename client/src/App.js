@@ -1,4 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+// Redux
+import { useDispatch } from 'react-redux';
+import { getProducts } from './redux/actions/products';
 
 // React-Router
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -14,6 +18,12 @@ import Custom from './pages/Custom/Custom';
 import Menu from './pages/Menu/Menu';
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getProducts());
+}, [dispatch]);
+
   return (
     <Router>
       <Header />

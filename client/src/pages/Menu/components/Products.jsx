@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import {
     Typography,
     Grid,
@@ -9,26 +10,25 @@ import useStyle from './productsStyles';
 import CardItem from './CardItem';
 import Filter from './Filter';
 
-import menuData from '../../../assets/data/menuData';
-
 const Products = () => {
     const classes = useStyle();
+    const selector = useSelector( state => state.products );
     const itemsPerPage = 9;
     const [page, setPage] = useState(1);
-    const [data, setData] = useState(menuData);
+    const [data, setData] = useState(selector);
     const [loading, setLoading] = useState(false);
     const noOfPages = Math.ceil(data.length / itemsPerPage);
-
+    
     const handleChange = (event, value) => {
         setLoading(false);
         setPage(value);
         setTimeout(() => {
             setLoading(true);
-        }, 2000);
+        }, 100);
     };
     
     const handleFilter = (name) => {
-        const newItems = menuData.filter(item => item.category.indexOf(name) >= 0);
+        const newItems = selector.filter(item => item.category.indexOf(name) >= 0);
         setLoading(false);
         setData(newItems);
         setPage(1);

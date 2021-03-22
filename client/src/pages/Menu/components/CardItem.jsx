@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import useStyle from './productsStyles';
 import Skeleton from '@material-ui/lab/Skeleton';
 import {

@@ -1,39 +1,32 @@
-import cakeDesignImg from '../img/service-cake.png'
-import dessertsImg from '../img/service-desserts.png'
-import menuPlannerImg from '../img/service-menu.png'
-import recipesImg from '../img/service-recipe.png'
-import cupcakesImg from '../img/service-cupcake.png'
-import deliveryImg from '../img/service-delivery.png'
-
-const serviceData = [
+const serviceData =  [
     {
         name: "Design",
-        image: cakeDesignImg,
+        image: '/img/service-cake.png',
         description: "Description"
     },
     {
         name: "Desserts",
-        image: dessertsImg,
+        image: '/img/service-desserts.png',
         description: "Description"
     },
     {
         name: "Planner",
-        image: menuPlannerImg,
+        image:'/img/service-menu.png',
         description: "Description"
     },
     {
         name: "Recipes",
-        image: recipesImg,
+        image: '/img/service-recipe.png',
         description: "Description"
     },
     {
         name: "Cupcakes",
-        image: cupcakesImg,
+        image: '/img/service-cupcake.png',
         description: "Description"
     },
     {
         name: "Delivery",
-        image: deliveryImg,
+        image: '/img/service-delivery.png',
         description: "Description"
     },
 ];

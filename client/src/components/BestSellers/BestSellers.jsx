@@ -4,7 +4,6 @@ import {
     Grid,
     Box,
     Slide,
-    Grow,
     Fade
 } from '@material-ui/core';
 import useStyle from './BestSellersStyles';

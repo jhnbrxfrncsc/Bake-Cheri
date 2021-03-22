@@ -1,14 +1,17 @@
 import { makeStyles } from '@material-ui/styles';
 
+
 const useStyles = makeStyles(theme => ({
     font1: {
         fontFamily: "'Sniglet', cursive",
         color: "#f8bbd0",
+        [theme.typography]: {
+            fontFamily: "'Sniglet', cursive",
+        }
     },
     font2: {
         fontFamily: "'Oswald', sans-serif",
         letterSpacing: 3,
-
     },
     icon: {
         textDecoration: "none"
