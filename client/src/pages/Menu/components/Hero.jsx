@@ -15,7 +15,7 @@ const Hero = () => {
                         timeout={1000}
                         style={{ transitionDelay: '2s' }}
                     >
-                        <Typography variant="h1" style={{ color: "#000" }}>
+                        <Typography variant="h1" style={{ color: "#000", fontFamily: "'Oswald', sans-serif", }}>
                             MENU
                         </Typography>
                     </Zoom>

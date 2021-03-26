@@ -23,7 +23,7 @@ const theme = createMuiTheme({
             'Sniglet',
             'sans-serif', 
             'cursive'
-        ]. join(','),
+        ].join(','),
     }
 });
 

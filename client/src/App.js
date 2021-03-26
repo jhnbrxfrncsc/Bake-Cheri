@@ -16,6 +16,8 @@ import Home from './pages/Home';
 import Contact from './pages/Contact/Contact';
 import Custom from './pages/Custom/Custom';
 import Menu from './pages/Menu/Menu';
+import ScrollToTop from './components/ScrollToTop';
+import NewProduct from './pages/NewProduct/NewProduct';
 
 function App() {
   const dispatch = useDispatch()
@@ -45,8 +47,12 @@ function App() {
         <Route path="/custom">
           <Custom />
         </Route>
+        {/* NEW PRODUCT ROUTE */}
+        <Route path="/new-product">
+          <NewProduct />
+        </Route>
       </Switch>
-      
+      <ScrollToTop />
       <Footer /> 
     </Router>
   );

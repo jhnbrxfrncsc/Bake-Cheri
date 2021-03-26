@@ -5,9 +5,6 @@ const useStyles = makeStyles(theme => ({
     font1: {
         fontFamily: "'Sniglet', cursive",
         color: "#f8bbd0",
-        [theme.typography]: {
-            fontFamily: "'Sniglet', cursive",
-        }
     },
     font2: {
         fontFamily: "'Oswald', sans-serif",
