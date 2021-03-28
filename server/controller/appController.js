@@ -12,19 +12,19 @@ export const getProducts = (req, res) => {
 export const getProduct = async (req, res) => {
     try {
         const products = await PostProduct.find();
-
         res.status(200).json(products);
     } catch (error) {
         res.status(404).json({ message: error.message })
     }
 }
 
-export const createProduct = async (req, res) => {
+export const createProduct = async(req, res) => {
     const { name, image, price, category } = req.body;
-    const newProduct = new PostProduct(name, image, price, category);
+    console.log(name, price, category);
+    const newProduct = new PostProduct({name, image, price, category});
     try {
         await newProduct.save();
-        res.status(201).json(newProduct);
+        res.status(201).json(newProduct)
     } catch (error) {
         res.status(404).json({ message: error.message })
     }

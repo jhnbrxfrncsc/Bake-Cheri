@@ -30,7 +30,7 @@ export default makeStyles({
     paper: {
         height: "90vh",
         padding: 30,
-        width: "50%" ,
+        width: "80%" ,
         backgroundColor: "#f8bbd0"
     },
 });

@@ -3,13 +3,8 @@ import useStyles from './styles';
 import { Form as Forms, useFormikContext } from 'formik';
 import {
     Button,
-    // FormControl,
     Grid,
     InputAdornment,
-    // InputLabel,
-    // MenuItem,
-    // Select,
-    // TextField,
     Typography
 } from '@material-ui/core';
 import FileBase from 'react-file-base64';

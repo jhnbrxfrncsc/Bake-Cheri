@@ -10,6 +10,6 @@ const dataSchema = mongoose.Schema({
 );
 
 
-const PostProduct = mongoose.model('PostProduct', dataSchema);
+const PostProduct = mongoose.model('products', dataSchema);
 
 export default PostProduct;

@@ -31,6 +31,7 @@ const NewProduct = () => {
                         (data) => {
                             const newCategory = ['All', data.category];
                             data.category = newCategory;
+                            console.log(data);
                             dispatch(postProduct(data));
                         }
                     }

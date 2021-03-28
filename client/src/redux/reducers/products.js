@@ -6,9 +6,8 @@ const reducer = (state = [], action) => {
             return action.payload;
 
         case "CREATE_PRODUCT":
-            console.log(action.payload)
-            // return [...state, action.payload];
-            return state
+            console.log([...state, action.payload])
+            return [...state, action.payload];
         default:
             return state;
     }
