@@ -13,13 +13,7 @@ import SelectField from './FormsUI/Select'
 
 
 
-const Form = ({
-    values, 
-    handleChange, 
-    touched, 
-    errors, 
-    handleSubmit
-}) => {
+const Form = ({ handleSubmit }) => {
     const classes = useStyles();
     const { setFieldValue } = useFormikContext();
     const categories = ["Cakes", "Cupcakes", "Doughnuts", "Sweets"];
@@ -47,6 +41,7 @@ const Form = ({
                     <Textfield 
                         name="name"
                         label="Product Name"
+                        fullWidth
                     />
                 </Grid>
                 <Grid item xs={12}>
@@ -54,6 +49,7 @@ const Form = ({
                         name="price"
                         label="Product Price"
                         type="number"
+                        fullWidth
                         InputProps={{
                             startAdornment: (
                                 <InputAdornment position="start">

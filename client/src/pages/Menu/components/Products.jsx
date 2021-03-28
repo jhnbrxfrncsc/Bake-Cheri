@@ -60,9 +60,9 @@ const Products = () => {
                 {
                     data
                     .slice((page - 1) * itemsPerPage, page * itemsPerPage)
-                    .map((data, index) => {
+                    .map((data) => {
                         return(
-                        <Grid item xs={12} sm={6} md={4} key={index}>
+                        <Grid item xs={12} sm={6} md={4} key={data.id}>
                             <CardItem 
                                 name={data.name} 
                                 title={data.name} 

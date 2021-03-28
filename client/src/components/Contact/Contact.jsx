@@ -6,7 +6,6 @@ import {
     Typography,
     Button,
     Grow, 
-    TextareaAutosize 
 } from '@material-ui/core';
 
 
@@ -84,7 +83,7 @@ const Contact = () => {
                                 className: classes.input
                             }}
                         />
-                        <TextareaAutosize
+                        <TextField
                             className={classes.textArea}
                             label="Message" 
                             variant="filled"
@@ -94,10 +93,9 @@ const Contact = () => {
                             margin="normal"
                             fullWidth
                             onChange={handleChange}
-                            // InputProps={{
-                            //     className: classes.textArea
-                            // }}
-                            type={<TextareaAutosize rowsMax={4} />}
+                            InputProps={{
+                                className: classes.textArea
+                            }}
                             multiline
                         />
                         <Button 

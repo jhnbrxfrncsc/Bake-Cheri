@@ -10,7 +10,7 @@ import {
 } from '@material-ui/core';
 import { FaCartPlus } from 'react-icons/fa';
 
-const CardItem = ({name, title, title2, image}) => {
+const CardItem = ({name, title, image}) => {
     const classes = useStyle();
     return(
         <Card>
@@ -37,24 +37,8 @@ const CardItem = ({name, title, title2, image}) => {
                         >
                             {name.toUpperCase()}
                         </Typography>
-                        {/* <Typography 
-                            variant="caption" 
-                            color="textSecondary" 
-                            component="p" 
-                            style={{ color: "#808080" }}
-                        >
-                            {title2}
-                        </Typography> */}
                     </CardContent>
                 </CardActionArea>
-                {/* <CardActions className={classes.actions}>
-                    <Button size="small" color="" variant="outlined">
-                        Share
-                    </Button>
-                    <Button size="small" color="secondary" variant="contained">
-                        Learn More
-                    </Button>
-                </CardActions> */}
             </Card>
     )
 }

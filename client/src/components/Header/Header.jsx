@@ -8,7 +8,7 @@ import { AppBar, Box, Toolbar, Typography } from '@material-ui/core';
 const Header = () => {
     const classes = useStyles();
     const [nav, setNav] = useState(true);
-    const [navPosition, setNavPosition] = useState("");
+    const [navPosition, setNavPosition] = useState("static");
     
     const changeNavPosition = () => {
         const scrollDown = window.scrollY

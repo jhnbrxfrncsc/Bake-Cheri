@@ -30,13 +30,13 @@ return (
                         direction="left" 
                         in={animation} 
                         timeout={3000}
+                        key={image.title}
                         style={{
                             transitionDelay: `${index+1}s`
                         }}
                     >
                         <ButtonBase
                             focusRipple
-                            key={image.title}
                             className={classes.image}
                             focusVisibleClassName={classes.focusVisible}
                             style={{

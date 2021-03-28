@@ -54,6 +54,7 @@ const Services = () => {
                         <Grow 
                             in={animation} 
                             timeout={1000} 
+                            key={index}
                             style={{ 
                                 transitionDelay:  window.innerWidth >= 800 ? '1s' : `${index+1}s`
                             }}
@@ -63,7 +64,6 @@ const Services = () => {
                                 xs={12} 
                                 sm={6}
                                 className={classes.card}
-                                key={index}
                             >
                                 <Box
                                     className={classes.serviceImg}

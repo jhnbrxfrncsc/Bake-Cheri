@@ -62,6 +62,7 @@ const Services = () => {
                                 in={animation} 
                                 timeout={1000} 
                                 style={{ transitionDelay: `${index + 1}s` }}
+                                key={index}
                             >
                                 <Grid 
                                     item 

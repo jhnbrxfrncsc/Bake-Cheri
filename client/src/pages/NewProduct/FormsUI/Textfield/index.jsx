@@ -12,7 +12,6 @@ const TextfieldWrapper = ({
     const configTextfield =  {
         ...field,
         ...otherProps,
-        fullWidth: true,
         variant: "filled",
         margin: "normal",
         color: "primary",
