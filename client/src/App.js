@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 // Redux
-import { useDispatch } from 'react-redux';
-import { getProducts } from './redux/actions/products';
+// import { useDispatch } from 'react-redux';
+// import { getProducts } from './redux/actions/products';
 
 // React-Router
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -14,17 +14,11 @@ import Footer from './components/Footer/Footer';
 // Pages
 import Home from './pages/Home';
 import Contact from './pages/Contact/Contact';
-import Custom from './pages/Custom/Custom';
 import Menu from './pages/Menu/Menu';
 import ScrollToTop from './components/ScrollToTop';
 import NewProduct from './pages/NewProduct/NewProduct';
 
 function App() {
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(getProducts());
-}, [dispatch]);
 
   return (
     <Router>
@@ -43,11 +37,7 @@ function App() {
         <Route path="/menu">
           <Menu />
         </Route>
-        {/* CUSTOM ORDER ROUTE */}
-        <Route path="/custom">
-          <Custom />
-        </Route>
-        {/* NEW PRODUCT ROUTE */}
+        {/* ADD PRODUCT ROUTE */}
         <Route path="/new-product">
           <NewProduct />
         </Route>

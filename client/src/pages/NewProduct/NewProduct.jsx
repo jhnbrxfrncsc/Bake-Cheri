@@ -28,11 +28,11 @@ const NewProduct = () => {
                         category: "",
                     }}
                     onSubmit={
-                        (data) => {
+                        (data, { resetForm }) => {
                             const newCategory = ['All', data.category];
                             data.category = newCategory;
-                            console.log(data);
                             dispatch(postProduct(data));
+                            resetForm({ values : '' });
                         }
                     }
                     validationSchema = {Schema}

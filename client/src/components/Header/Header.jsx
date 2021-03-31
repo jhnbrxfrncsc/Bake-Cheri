@@ -112,7 +112,7 @@ const Header = () => {
                             </Typography>
                         </Link>
                         <Link 
-                            to="/custom" 
+                            to="/new-product" 
                             onClick={handleClick}
                             className={classes.linkmarginleft}
                         >
@@ -120,7 +120,7 @@ const Header = () => {
                                 variant="body2"  
                                 className={classes.font2}
                             >
-                                CUSTOM
+                                ADD PRODUCT
                             </Typography>
                         </Link>
                         <Link 

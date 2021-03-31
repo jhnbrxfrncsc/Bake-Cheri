@@ -58,7 +58,7 @@ const CardItem = ({ name, title, price, image, loading, setLoading }) => {
                                     component="h2" 
                                     className={classes.font2}
                                 >
-                                    {name.toUpperCase()}
+                                    {name}
                                 </Typography>
                             )
                         }

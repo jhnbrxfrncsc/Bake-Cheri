@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+
+// Redux
+import { useDispatch, useSelector } from 'react-redux';
+import { getProducts } from '../../../redux/actions/products';
+
+// MaterialUI
 import {
     Typography,
     Grid,
     Box,
+    CircularProgress,
 } from '@material-ui/core';
 import { Pagination } from '@material-ui/lab';
 import useStyle from './productsStyles';
@@ -12,13 +18,27 @@ import Filter from './Filter';
 
 const Products = () => {
     const classes = useStyle();
+    const dispatch = useDispatch();
     const selector = useSelector( state => state.products );
+
+    // Pagination state
     const itemsPerPage = 9;
     const [page, setPage] = useState(1);
     const [data, setData] = useState(selector);
     const [loading, setLoading] = useState(false);
     const noOfPages = Math.ceil(data.length / itemsPerPage);
     
+    useEffect(() => {
+        let mounted = true;
+        if(mounted) {
+            dispatch(getProducts());
+            setData(selector);
+        }
+        return () => {
+            mounted = false;
+        }
+    }, [dispatch, selector]);
+
     const handleChange = (event, value) => {
         setLoading(false);
         setPage(value);
@@ -36,7 +56,6 @@ const Products = () => {
             setLoading(true);
         }, 1000);
     }
-
 
     return (
         <Box m={3} className={classes.center}>
@@ -58,6 +77,7 @@ const Products = () => {
             </Box>
             <Grid container spacing={4} alignItems="center" justify="center">
                 {
+                    data.length ? (
                     data
                     .slice((page - 1) * itemsPerPage, page * itemsPerPage)
                     .map((data) => {
@@ -74,6 +94,11 @@ const Products = () => {
                         </Grid>
                         )
                     })
+                    ) : (
+                        <Typography variant="h3">
+                            <CircularProgress />
+                        </Typography>
+                    )
                 }
             </Grid>
             <Box className={classes.pagination}>
